@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevScroll = scroll
         }
 
-        if ((scroll - prevScroll <= -25) && hidden) {
+        if ((scroll - prevScroll <= -35) && hidden) {
             header.classList.remove('hidden');
             hidden = false;
             prevScroll = scroll
@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function() {
         if (action === false) {
             if (menu) menu.classList.add('active');
+            menu.style.transform = 'translateX(0)';
             if (button) button.classList.add('active');
             action = true;
         } else {
