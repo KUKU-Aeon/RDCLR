@@ -1364,6 +1364,17 @@ time, mark, audio, video{
         border: 2px solid #000000;
         outline: none;
     }
+    
+     input[type="checkbox"].error + label::before {
+        content: ' ';
+        top: 40px;
+        width: 27px;
+        height: 27px;
+        display: block;
+        background: white;
+        border: 2px solid #EC3332;
+        outline: none;
+    }
 
     input[type="checkbox"] + label::after {
         content: ' ';
