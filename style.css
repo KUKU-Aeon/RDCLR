@@ -1236,6 +1236,7 @@ time, mark, audio, video{
         width: 27px;
         background-color: transparent;
         border: none;
+        outline: none;
         background-image: url("img/hum.svg");
     }
 
@@ -1247,6 +1248,7 @@ time, mark, audio, video{
         width: 27px;
         height: 27px;
         background-color: transparent;
+        outline: none;
         border: none;
         background-image: url("img/close.png");
         background-repeat: round;
