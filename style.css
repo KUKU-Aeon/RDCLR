@@ -2382,7 +2382,7 @@ time, mark, audio, video{
         height: 100%;
     }
     
-    input[type="checkbox"].error{
-    border: 2px solid #EC3332;
+    input.error{
+        border: 2px solid #EC3332;
     }
 }
