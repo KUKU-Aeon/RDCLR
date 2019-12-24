@@ -16,6 +16,11 @@ time, mark, audio, video{
     border:none;
 }
 
+button
+{
+ outline: none;
+} 
+
 @media screen and (min-width: 800px) {
 
     main,footer, header{
