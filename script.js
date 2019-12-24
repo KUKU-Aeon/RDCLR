@@ -241,9 +241,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (menu) menu.classList.add('active');
             if (button) button.classList.add('active');
             action = true;
+            document.body.style.overflow = 'hidden';
         } else {
             if (menu) menu.classList.remove('active');
             if (button) button.classList.remove('active');
+            document.body.style.overflow = 'scroll';
             action = false;
         }
     });
