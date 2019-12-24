@@ -41,7 +41,7 @@ button
         color: #EC3332;
     }
     
-    .links a:hover{
+    .links a span:hover{
         color: #EC3332;
         font-size: 40px;
     }
