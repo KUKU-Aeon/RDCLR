@@ -1215,7 +1215,6 @@ time, mark, audio, video{
         margin-left: 5%;
         margin-right: 5%;
         display: flex;
-        position:fixed;
         flex-direction: row;
         justify-content: space-between;
     }
