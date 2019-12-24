@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function() {
         if (action === false) {
             if (menu) menu.classList.add('active');
-            menu.style.left = '0';
+            menu.style.transform = 'translateX(-100%)';
             if (button) button.classList.add('active');
             action = true;
         } else {
