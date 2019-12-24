@@ -43,7 +43,7 @@ button
     
     a span:hover{
         color: #EC3332;
-        font-size: 40px;
+        transition: 0.5s;
     }
 
     ol
