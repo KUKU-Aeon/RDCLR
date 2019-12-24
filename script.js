@@ -245,8 +245,8 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             if (menu) menu.classList.remove('active');
             if (button) button.classList.remove('active');
-            document.body.style.overflow = 'scroll';
             action = false;
+            document.body.style.overflow = '';
         }
     });
 });
