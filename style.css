@@ -19,9 +19,90 @@ time, mark, audio, video{
 button
 {
  outline: none;
-} 
+}
+
+.slider_home{
+    width: 75vw;
+    height: 500px;
+    margin-top: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__wrapper_home {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.slider__control {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    text-align: center;
+    height: 50px;
+    transform: translateY(-50%);
+}
+
+.slider__control_left {left: 0;top: 90%;}
+
+.slider__control_right {top: 90%;left: 10%;}
+
+.slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 75px;
+    height: 55px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+    background-image: url("main/img/leftarrow.svg");
+}
+
+.slider__control_right::before {
+    background-image: url("main/img/rightarrow.svg");
+}
 
 @media screen and (min-width: 800px) {
+
+    .time p {
+        font-family: 'Montserrat', sans-serif;
+        width: 100px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #EC3332;
+        height: 40px;
+        padding-top: 20px;
+        margin-right: 4%;
+        border: 2px solid #EC3332;
+        box-shadow: 5px 5px #EC3332;
+    }
+
+   .text b{
+        float: left;
+        width: 80%;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin-left: 3%;
+    }
 
     main,footer, header{
         display: flex;
@@ -66,25 +147,32 @@ button
 
     ol li::before
     {
-        content: counter(count);
-        margin-right: 20px;
-        color: #EC3332;
-        font-size: 40px;
+        font-size: 36px;
+        width: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
         font-weight: bold;
+        line-height: 130%;
+        content: counter(count);
+        color: #EC3332;
+        display: inline-block;
     }
 
-    ol li::after
-    {
-        content: counter(count);
-        margin-right: 20px;
-        color: transparent;
-        font-size: 40px;
+    ol li::after {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
         font-weight: bold;
-        position:absolute;
-        top:2px;
-        left:2px;
+        line-height: 130%;
+        content: counter(count);
+        display: inline-block;
+        color: transparent;
+        position: absolute;
+        top: 2px;
+        left: 2px;
         -webkit-text-stroke: 2px #EC3332;
         z-index: -1;
+        font-size: 36px;
+        width: 50px;
     }
 
     footer {
@@ -129,6 +217,11 @@ button
         margin-right: 30px;
     }
 
+    footer div a:hover, footer div a span:hover{
+        color: #000000;
+        transition: 0.5s;
+    }
+
     footer nav {
         margin-top: 24px;
     }
@@ -143,6 +236,11 @@ button
         text-decoration: none;
         margin-left: 30px;
         color: #000000;
+    }
+
+    footer nav a:hover{
+        color: #EC3332;
+        transition: 0.5s;
     }
 
     header
@@ -180,6 +278,22 @@ button
         text-decoration: none;
         margin-left: 30px;
         color: #000000;
+    }
+
+    header nav a:hover{
+        color: #EC3332;
+        transition: 0.5s;
+    }
+
+    p + a:hover{
+        text-decoration: underline;
+        color: #000000;
+        transition: 0.5s;
+
+    }
+
+    h2 + img{
+        box-shadow: 10px 10px #EC3332;
     }
 
     header button
@@ -627,14 +741,6 @@ button
         margin-top: 80px;
     }
 
-    .l_arrow
-    {
-        margin-top: 40px;
-    }
-
-    .r_arrow{
-        padding-left: 40px;
-    }
 
     div + h2
     {
@@ -687,7 +793,7 @@ button
     {
         margin-top: 140px;
         display: grid;
-        grid-template-columns:  1fr 1fr;
+        grid-template-columns: 45% 45%;
         grid-column-gap: 170px;
         grid-row-gap: 40px;
         align-items: center;
@@ -777,6 +883,7 @@ button
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
+        margin-right: 5%;
         margin-top: 20px;
     }
 
@@ -789,6 +896,11 @@ button
     .video{
         position: relative;
         cursor: pointer;
+        width: 85%;
+        margin-left: 80px;
+        margin-right: 90px;
+        height: 50%;
+        margin-top: 220px;
     }
 
     video{
@@ -1015,21 +1127,26 @@ button
     .speak_photo
     {
         margin-bottom: 10px;
-        width: 85%;
+        width: 88%;
         background-color: black;
         box-shadow: 7px 7px #EC3332;
     }
 
-    .i
-    {
+   p i{
         font-family: 'Open Sans', sans-serif;
         font-style: italic;
         font-weight: normal;
         font-size: 20px;
         line-height: 130%;
+        float: left;
+        padding-left: 3%;
         letter-spacing: 0.02em;
         color: #000000;
-        margin-top: -30px;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+        width: 80%;
     }
 
     .slider_main
@@ -1618,16 +1735,6 @@ button
         margin-top: 30px;
     }
 
-    .l_arrow
-    {
-        width: 14px;
-        margin: 20px 20px 0 0;
-    }
-
-    .r_arrow
-    {
-        width: 14px;
-    }
 
     .slider-wrapper {
         display: flex;
@@ -1785,12 +1892,6 @@ button
         width: 100%;
         height: 100%;
         box-shadow: 2px 2px #EC3332;
-    }
-
-    .time img
-    {
-        width: 60px;
-        margin-right: 10px;
     }
 
     a span
@@ -2120,7 +2221,6 @@ button
     {
         display: grid;
         margin-top: 40px;
-        gap: 34px;
     }
 
     .i
@@ -2136,16 +2236,11 @@ button
 
     .speak_photo
     {
-        width: 45%;
+        width: 80%;
         background-color: black;
         box-shadow: 3px 3px #EC3332;
         float: left;
         margin-right: 20px;
-    }
-
-    .speak_photo + p
-    {
-        margin-top: 20px;
     }
 
     .marquee-block
@@ -2272,6 +2367,10 @@ button
     .video{
         position: relative;
         cursor: pointer;
+        width: 95%;
+        margin-top: 100px;
+        margin-left: 22px;
+        margin-right: 22px;
     }
 
     #vid{
@@ -2308,7 +2407,7 @@ button
         position: absolute;
         z-index: 4;
         top: 41%;
-        left: 15%;
+        left: 8%;
         width: 50%;
         margin-right: 20%;
     }
@@ -2323,8 +2422,8 @@ button
         border: none;
         width: 35%;
         height: 35%;
-        top: 27%;
-        left: 45%;
+        top: 26%;
+        left: 35%;
         outline: none;
         cursor: pointer;
         transition: 0.5s ease;
@@ -2397,4 +2496,77 @@ button
     form input.error{
         border: 2px solid #EC3332;
     }
+
+    .time
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    p i{
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 130%;
+        float: left;
+        padding-left: 3%;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+        width: 80%;
+    }
+
+    .text b{
+        float: left;
+        width: 80%;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin-left: 3%;
+        margin-top: 7%;
+    }
+
+    .slider__wrapper_home {
+        display: flex;
+        /* flex-direction: column; */
+        transition: transform 0.6s ease;
+    }
+
+    .time p {
+        font-family: 'Montserrat', sans-serif;
+        width: 60px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #EC3332;
+        height: 40px;
+        padding-top: 10px;
+        margin-right: 4%;
+        margin-bottom: 5%;
+        border: 2px solid #EC3332;
+        box-shadow: 3px 3px #EC3332;
+    }
+
+    h2 + img{
+        box-shadow: 5px 5px #EC3332;
+    }
+
+
+    .slider__control_left {left: 0;top: 42%;}
+
+    .slider__control_right {top: 42%;left: 21%;}
 }
